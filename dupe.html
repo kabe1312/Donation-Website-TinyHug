@@ -1,0 +1,157 @@
+<div id="donate">
+    <h1>How You Can Help</h1>
+    <div class="container">
+        <div class="indicator">
+            <span class="btn active"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+        </div>
+        <div class="testimonial">
+            <div class="slide-row" id="slide">
+                <div class="slide-col">
+                    <div class="user-text">
+                         <h2>Donate Today</h2><br>
+                         <p>Your generosity matters. Make a difference by contributing to our cause. Your donation, whether big or small, goes a long way in transforming lives.</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="./assets/pexels-antoni-shkraba-7345451.jpg">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                         <h2>Super Convenient</h2><br>
+                         <p>Donate reusable items from the convenience of your house. Avail doorstep pickup and get your donations delivered to the ones in need.</p>
+                    </div>
+                    <div class="user-img">
+                         <img src="./assets/pexels-joellen-moths-3372787.jpg">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                         <h2>Volunteer with Us</h2><br>
+                         <p>Join our team of dedicated volunteers and actively participate in making a difference. Whether it's organizing events or distributing donations, your time and effort are invaluable.</p>
+                    </div>
+                    <div class="user-img">
+                         <img src="./assets/pexels-andrea-piacquadio-3830752.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var btn = document.getElementsByClassName("btn");
+    var slide = document.getElementById("slide");
+    btn[0].onclick = function(){
+        slide.style.transform = "translateX(0px)";
+        for(i=0;i<4;i++)
+        {
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+    btn[1].onclick = function(){
+        slide.style.transform = "translateX(-800px)";
+        for(i=0;i<4;i++)
+        {
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+    btn[2].onclick = function(){
+        slide.style.transform = "translateX(-1600px)";
+        for(i=0;i<4;i++)
+        {
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+</script>
+
+
+#donate{
+    height: 700px;
+    background-color: #fefae0;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  #donate h1{
+    text-align: center;
+    padding-top: 50px;
+    color: black ;
+  }
+  .slide-row{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+  }
+  .slide-col{
+    width: 800px;
+    height: 400px;
+    position: relative;
+  }
+  .user-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  .user-img img{
+    height: 100%;
+    border-radius: 10px;
+  
+  }
+  .user-text{
+    background: #2d3a59;
+    width: 520px;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    color: #d3d4d6;
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .user-text p{
+    font-size: 18px;
+    line-height: 24px;
+  
+  }
+  .container{
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+  }
+  .indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -80px;
+  }
+  .btn{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    margin-top: 8px;
+    border-radius: 15px;
+    background: #333;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .active{
+    width: 45px;
+  }
+  .testimonial{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
